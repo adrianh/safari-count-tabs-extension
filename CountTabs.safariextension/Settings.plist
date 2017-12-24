@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DefaultValue</key>
+		<string>16</string>
+		<key>Key</key>
+		<string>badgeLimit</string>
+		<key>Title</key>
+		<string>Show badge when more than</string>
+		<key>Titles</key>
+		<array>
+			<string>1 tab</string>
+			<string>16 tabs</string>
+			<string>32 tabs</string>
+			<string>64 tabs</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>1</string>
+			<string>16</string>
+			<string>32</string>
+			<string>64</string>
+		</array>
+	</dict>
+</array>
+</plist>

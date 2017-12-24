@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Count Tabs</title>
+
+    <script type="text/javascript">
+
+        function tabCount() {
+            return safari.application.browserWindows
+                .map( w => w.tabs.length )
+                .reduce (( sum, num_tabs ) => sum + num_tabs, 0);
+        }
+
+        function badgeLimit() {
+            return safari.extension.settings.badgeLimit;
+        }
+
+        function setBadge(numTabs) {
+            var badge = (numTabs <= badgeLimit()) ? 0 : numTabs;
+            safari.extension.toolbarItems.forEach( function(item) {
+                if (item.identifier == "countTabs") {
+                    item.badge = badge
+                };
+            })
+        }
+
+        function popoverHandler(event) {
+            if (event.target.identifier == "countTabs") {
+                document.getElementById("tabCount").innerHTML   = tabCount();
+                document.getElementById("badgeLimit").innerHTML = badgeLimit();
+            }
+        }
+
+        function validateHandler(event) {
+            setBadge(tabCount());
+        }
+
+        safari.application.addEventListener("validate", validateHandler,    false);
+        safari.application.addEventListener("popover",  popoverHandler,     true);
+
+    </script>
+
+    <style type="text/css">
+
+        body {
+            font-family: system-ui;
+            text-align: center;
+        }
+
+        .tab-info {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .badge-info {
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p class="tab-info badged"><span id="tabCount">??</span> tabs&nbsp;open</p>
+    <p class="badge-info">(badge when &gt; <span id="badgeLimit">??</span>)</p>
+
+</body>
+
+</html>
+
