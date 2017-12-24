@@ -1,0 +1,1 @@
+# safari-count-tabs-extension
