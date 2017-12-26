@@ -12,6 +12,7 @@
 		<key>Titles</key>
 		<array>
 			<string>1 tab</string>
+			<string>8 tabs</string>
 			<string>16 tabs</string>
 			<string>32 tabs</string>
 			<string>64 tabs</string>
@@ -21,6 +22,7 @@
 		<key>Values</key>
 		<array>
 			<string>1</string>
+			<string>8</string>
 			<string>16</string>
 			<string>32</string>
 			<string>64</string>
