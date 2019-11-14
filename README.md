@@ -2,7 +2,7 @@
 
 ## IMPORTANT NOTE:
 
-**This no longer works on Catalina / Safari >13.0 because have Apple dropped support for this style of implementing Safari extensions.**
+**This no longer works on Catalina / Safari >13.0 because Apple dropped support for this style of Safari extension.**
 
 **However some nice folk have implemented the same functionality (and more!) using the new extension framework. You can build it yourself from [their github repository](https://github.com/otzbergnet/tabCount) or [get it straight from the App Store](https://apps.apple.com/de/app/tab-count/id1487406555?mt=12).**
 
